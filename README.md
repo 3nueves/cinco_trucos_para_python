@@ -31,7 +31,7 @@ print(factorial(5))
 120
 ```
 
-## Explicación de la función:
+### Explicación de la función:
 En cada llamada a si misma va creando un stack en la pila de si misma con el valor de n pero sin devolver nigún valor hasta que n vale 1, en ese momento se cumple la condición 'if n == 1:' y retorna 1, al haber un retorno, 1, se van eliminando todos los stacks anteriores y se va ejecutando el 'else: return n * factorial(n-1)' que sería:
 
 return ( 1 * 1 )
@@ -46,7 +46,7 @@ En este link podréis ver como se ejecuta este código para poder entenderlo mej
 
 
 
-# 2 - Operador ternario
+## 2 - Operador ternario
 Los operadores ternarios son más conocidos en Python como expresiones condicionales. Estos operadores evalúan si una expresión es verdadera o no.
 
 ### Cuando la utilizaremos:
@@ -67,7 +67,7 @@ result # contendrá  ‘respuesta incorrecta’
 ```
 
 
-# 3 - Función Lambda
+## 3 - Función Lambda
 También conocidas como funciones anónimas, las funciones lambda son una forma corta de declarar funciones pequeñas y anónimas. Las llamamos “funciones anónimas” porque técnicamente carecen de nombre.
 
 ### Cuando la utilizaremos:
@@ -97,3 +97,39 @@ lambda x,y : x + y
 #Para poder utilizarla necesitamos guardarla en una variable.
 suma_dos = lambda x,y : x + y
 ```
+
+
+## 4 - Función Filter
+filter() es una función para iterar sobre un iterable exitente donde podrás filtrar su contenido mediante una función condicional. filter() creará un objeto iterable que podrás recorrer con un "for".
+
+### Cuando la utilizaremos:
+La función filter() puede usarse para crear un nuevo iterador a partir de un iterable existente (como una lista o un diccionario) que filtrará de forma eficiente los elementos usando una función que proporcionamos.
+
+### Estructura
+La sintaxis de una función filter() es ```filter(function, iterable)```
+
+### Ejemplo:
+Por ejemplo, supongamos que tenemos una lista varios números y queremos filtrarla, quedándonos únicamente con los múltiples de 5...
+
+```python
+def multiple(numero):    # Primero declaramos una función condicional
+    if numero % 5 == 0:  # Comprobamos si un numero es múltiple de cinco
+        return True      # Sólo devolvemos True si lo es
+
+numeros = [2, 5, 10, 23, 50, 33]
+
+filter(multiple, numeros)
+```
+
+```python
+<filter at 0x257ac84abe0>
+```
+
+Si ejecutamos el filtro obtenemos un objeto de tipo filtro, pero podemos transformarlo en una lista fácilmente haciendo un cast (conversión):
+
+```python
+list( filter(multiple, numeros) )
+
+[5, 10, 50]
+```
+
