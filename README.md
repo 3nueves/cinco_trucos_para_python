@@ -99,8 +99,8 @@ suma_dos = lambda x,y : x + y
 ```
 
 
-## 4 - Función Filter
-filter() es una función para iterar sobre un iterable exitente donde podrás filtrar su contenido mediante una función condicional. filter() creará un objeto iterable que podrás recorrer con un "for".
+## 4 - Función filter()
+filter() es una función para iterar sobre un iterable exitente donde podrás filtrar su contenido mediante una función condicional. filter() creará un objeto iterable de tipo filter que podrás recorrer con un "for".
 
 ### Cuando la utilizaremos:
 La función filter() puede usarse para crear un nuevo iterador a partir de un iterable existente (como una lista o un diccionario) que filtrará de forma eficiente los elementos usando una función que proporcionamos.
@@ -133,3 +133,4 @@ list( filter(multiple, numeros) )
 [5, 10, 50]
 ```
 
+## 5 - Función map()
