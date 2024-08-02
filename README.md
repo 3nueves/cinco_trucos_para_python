@@ -106,7 +106,7 @@ filter() es una función para iterar sobre un iterable exitente donde podrás fi
 La función filter() puede usarse para crear un nuevo iterador a partir de un iterable existente (como una lista o un diccionario) que filtrará de forma eficiente los elementos usando una función que proporcionamos.
 
 ### Estructura
-La sintaxis de una función filter() es ```filter(function, iterable)```
+La sintaxis de una función filter() es ```filter(function, objecto iterable)```
 
 ### Ejemplo:
 Por ejemplo, supongamos que tenemos una lista varios números y queremos filtrarla, quedándonos únicamente con los múltiples de 5...
@@ -134,3 +134,25 @@ list( filter(multiple, numeros) )
 ```
 
 ## 5 - Función map()
+En Python, la función map nos permite aplicar una función sobre los items de un objeto iterable (lista, tupla, etc...).
+
+### Cuando la utilizaremos:
+El uso de map es especialmente útil si quieres aplicar una misma función a cada uno de estos elementos, que luego puedes pasar a la función como parámetro
+
+### Estructura:
+La sintaxis de la función map() es ```map(function, objeto iterable) ```
+
+### Ejemplo:
+
+Queremos multiplicar los números de dos listas:
+
+```python
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9, 10]
+
+list( map(lambda x,y : x*y, a,b) )
+```
+
+```bash
+[7, 9, 11, 13, 15]
+```
